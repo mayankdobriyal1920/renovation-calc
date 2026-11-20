@@ -14,7 +14,7 @@ const CALCULATORS = [
     label: "Square Footage Calculator",
     desc: "Area of rooms, walls and irregular spaces in ft², yd² or m².",
     icon: "📐",
-    status: "soon",
+    status: "live",
   },
   {
     href: "/calculators/concrete-slab/",
@@ -28,42 +28,42 @@ const CALCULATORS = [
     label: "Flooring Calculator",
     desc: "Net area, purchase area and number of boxes needed.",
     icon: "🪵",
-    status: "soon",
+    status: "live",
   },
   {
     href: "/calculators/paint/",
     label: "Paint Calculator",
     desc: "Gallons of paint and primer for walls and ceilings.",
     icon: "🎨",
-    status: "soon",
+    status: "live",
   },
   {
     href: "/calculators/fence-material/",
     label: "Fence Material Calculator",
     desc: "Posts, rails and pickets for a straight fence run.",
     icon: "🪜",
-    status: "soon",
+    status: "live",
   },
   {
     href: "/calculators/deck-material/",
     label: "Deck Material Calculator",
     desc: "Decking boards and joist counts for rectangular decks.",
     icon: "🏡",
-    status: "soon",
+    status: "live",
   },
   {
     href: "/calculators/roof-area-pitch/",
     label: "Roof Area & Pitch Calculator",
     desc: "Slope factor and sloped roof surface area.",
     icon: "🏠",
-    status: "soon",
+    status: "live",
   },
   {
     href: "/calculators/renovation-budget/",
     label: "Renovation Budget Calculator",
     desc: "Organize materials, labor and costs into a planning budget.",
     icon: "💰",
-    status: "soon",
+    status: "live",
   },
 ];
 
@@ -141,8 +141,8 @@ export default function HomePage() {
                     Live
                   </span>
                 ) : (
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs font-medium text-white/50">
-                    Soon
+                  <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-xs font-medium text-emerald-300">
+                    Now
                   </span>
                 )}
               </div>
