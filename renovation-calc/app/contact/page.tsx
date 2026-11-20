@@ -18,8 +18,8 @@ export default function Page() {
         </p>
         <p className="mt-4 text-white/80">
           Email:{" "}
-          <a href="mailto:hello@renovationcalc.example" className="text-orange-300 underline">
-            hello@renovationcalc.example
+          <a href="mailto:hello@homecalchub.online" className="text-orange-300 underline">
+            hello@homecalchub.online
           </a>
         </p>
         <p className="mt-3 text-sm text-white/60">

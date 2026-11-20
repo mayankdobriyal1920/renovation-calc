@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://renovationcalc.example"),
+  metadataBase: new URL("https://homecalchub.online"),
   title: {
     default: "Home Renovation Calculator Hub",
     template: "%s | RenovationCalc",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
     type: "website",
-    url: "https://renovationcalc.example",
+    url: "https://homecalchub.online",
   },
 };
 

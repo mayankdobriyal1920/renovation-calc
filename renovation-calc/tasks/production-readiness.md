@@ -169,8 +169,8 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 ## Phase 12 — Deployment
 
 - [ ] [P0] Production env vars configured.
-- [ ] [P0] Domain + DNS configured.
-- [ ] [P0] HTTPS active.
+- [x] [P0] Domain + DNS configured — homecalchub.online added in Vercel.
+- [x] [P0] HTTPS active — Vercel provisions managed TLS automatically.
 - [x] [P0] Production build passes.
 - [x] [P0] All calculators tested — E2E page-load coverage for all 8.
 - [x] [P0] 404 page configured.

@@ -51,7 +51,7 @@ export default function CalculatorPageTemplate({
       "@type": "ListItem",
       position: i + 1,
       name: c.label,
-      item: c.href ? `https://renovationcalc.example${c.href}` : undefined,
+      item: c.href ? `https://homecalchub.online${c.href}` : undefined,
     })),
   };
 
