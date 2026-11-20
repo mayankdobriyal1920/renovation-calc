@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import CalculatorCard, { ResultPanel, BreakdownTable } from "@/components/calculator/CalculatorCard";
+import AdSlot from "@/components/ads/AdSlot";
+import { track } from "@/lib/analytics";
 import InputGroup, { GlassInput, GlassSelect } from "@/components/calculator/InputGroup";
 import CalculatorPageTemplate from "@/components/calculator/CalculatorPageTemplate";
 import { calculateRenovationBudget } from "../../../calculators/renovationBudget";
@@ -53,6 +55,7 @@ export default function BudgetCalculator() {
     } catch {
       // ignore
     }
+    track("calculator_view", { calculator_id: "renovation-budget" });
   }, []);
 
   function persist() {
@@ -280,6 +283,9 @@ export default function BudgetCalculator() {
                 <p className="mt-3 text-sm">Add line items and click Calculate.</p>
               </div>
             </ResultPanel>
+          )}
+          {result && (
+            <AdSlot className="mt-4" testId="ad-after-result" />
           )}
         </div>
       </div>

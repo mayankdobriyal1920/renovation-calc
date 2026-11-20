@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CalculatorCard, { ResultPanel, BreakdownTable } from "@/components/calculator/CalculatorCard";
+import AdSlot from "@/components/ads/AdSlot";
+import { track } from "@/lib/analytics";
 import InputGroup, { GlassInput, GlassSelect } from "@/components/calculator/InputGroup";
 import CalculatorPageTemplate from "@/components/calculator/CalculatorPageTemplate";
 import { calculateFlooring } from "../../../calculators/flooring";
@@ -28,6 +30,10 @@ export default function FlooringCalculator() {
   const [price, setPrice] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ReturnType<typeof calculateFlooring> | null>(null);
+
+  useEffect(() => {
+    track("calculator_view", { calculator_id: "flooring" });
+  }, []);
 
   function update(id: number, patch: Partial<Row>) {
     setRows((rs) => rs.map((r) => (r.id === id ? { ...r, ...patch } : r)));
@@ -56,9 +62,11 @@ export default function FlooringCalculator() {
         pricePerBox: price ? Number(price) : undefined,
       });
       setResult(r);
+      track("calculation_complete", { calculator_id: "flooring" });
     } catch (err) {
       setResult(null);
       setError(err instanceof Error ? err.message : "Calculation failed.");
+      track("calculation_error", { calculator_id: "flooring", error_type: "validation" });
     }
   }
 
@@ -282,6 +290,9 @@ export default function FlooringCalculator() {
                 <p className="mt-3 text-sm">Add a room and click Calculate.</p>
               </div>
             </ResultPanel>
+          )}
+          {result && (
+            <AdSlot className="mt-4" testId="ad-after-result" />
           )}
         </div>
       </div>

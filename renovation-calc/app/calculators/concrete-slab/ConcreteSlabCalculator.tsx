@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import CalculatorCard, { ResultPanel, BreakdownTable } from "@/components/calculator/CalculatorCard";
+import AdSlot from "@/components/ads/AdSlot";
 import { track } from "@/lib/analytics";
 import InputGroup, { GlassInput } from "@/components/calculator/InputGroup";
 import AssumptionNotice from "@/components/calculator/AssumptionNotice";
@@ -225,6 +226,9 @@ export default function ConcreteSlabCalculator() {
                 <p className="mt-3 text-sm">Enter dimensions and click Calculate to see your result.</p>
               </div>
             </ResultPanel>
+          )}
+          {result && (
+            <AdSlot className="mt-4" testId="ad-after-result" />
           )}
         </div>
       </div>

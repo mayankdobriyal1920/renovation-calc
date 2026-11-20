@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CalculatorCard, { ResultPanel, BreakdownTable } from "@/components/calculator/CalculatorCard";
+import AdSlot from "@/components/ads/AdSlot";
+import { track } from "@/lib/analytics";
 import InputGroup, { GlassInput, GlassSelect } from "@/components/calculator/InputGroup";
 import CalculatorPageTemplate from "@/components/calculator/CalculatorPageTemplate";
 import { calculateDeck } from "../../../calculators/deck";
@@ -20,6 +22,10 @@ export default function DeckCalculator() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ReturnType<typeof calculateDeck> | null>(null);
 
+  useEffect(() => {
+    track("calculator_view", { calculator_id: "deck-material" });
+  }, []);
+
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
@@ -36,9 +42,11 @@ export default function DeckCalculator() {
         pricePerJoist: priceJoist ? Number(priceJoist) : undefined,
       });
       setResult(r);
+      track("calculation_complete", { calculator_id: "deck-material" });
     } catch (err) {
       setResult(null);
       setError(err instanceof Error ? err.message : "Calculation failed.");
+      track("calculation_error", { calculator_id: "deck-material", error_type: "validation" });
     }
   }
 
@@ -181,6 +189,9 @@ export default function DeckCalculator() {
                 <p className="mt-3 text-sm">Enter deck details and click Calculate.</p>
               </div>
             </ResultPanel>
+          )}
+          {result && (
+            <AdSlot className="mt-4" testId="ad-after-result" />
           )}
         </div>
       </div>

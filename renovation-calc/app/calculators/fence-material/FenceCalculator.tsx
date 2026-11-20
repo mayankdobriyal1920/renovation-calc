@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CalculatorCard, { ResultPanel, BreakdownTable } from "@/components/calculator/CalculatorCard";
+import AdSlot from "@/components/ads/AdSlot";
+import { track } from "@/lib/analytics";
 import InputGroup, { GlassInput } from "@/components/calculator/InputGroup";
 import CalculatorPageTemplate from "@/components/calculator/CalculatorPageTemplate";
 import { calculateFence } from "../../../calculators/fence";
@@ -19,6 +21,10 @@ export default function FenceCalculator() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ReturnType<typeof calculateFence> | null>(null);
 
+  useEffect(() => {
+    track("calculator_view", { calculator_id: "fence-material" });
+  }, []);
+
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
@@ -35,9 +41,11 @@ export default function FenceCalculator() {
         pricePerPicket: pricePicket ? Number(pricePicket) : undefined,
       });
       setResult(r);
+      track("calculation_complete", { calculator_id: "fence-material" });
     } catch (err) {
       setResult(null);
       setError(err instanceof Error ? err.message : "Calculation failed.");
+      track("calculation_error", { calculator_id: "fence-material", error_type: "validation" });
     }
   }
 
@@ -184,6 +192,9 @@ export default function FenceCalculator() {
                 <p className="mt-3 text-sm">Enter fence details and click Calculate.</p>
               </div>
             </ResultPanel>
+          )}
+          {result && (
+            <AdSlot className="mt-4" testId="ad-after-result" />
           )}
         </div>
       </div>

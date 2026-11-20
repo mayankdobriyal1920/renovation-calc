@@ -6,20 +6,14 @@
  * calculator_id are sent.
  */
 
-export type AnalyticsEvent =
-  | "calculator_view"
-  | "calculation_complete"
-  | "calculation_error"
-  | "result_copy"
-  | "result_print"
-  | "calculator_reset"
-  | "related_tool_click";
+export type AnalyticsEvent = string;
 
 export interface EventParams {
   calculator_id?: string;
   source_id?: string;
   destination_id?: string;
   error_type?: string;
+  value?: string;
 }
 
 declare global {
