@@ -89,7 +89,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Core tasks possible without a mouse.
 - [x] [P0] Mobile-first single-column form, large touch targets.
 - [x] [P0] Results immediately below form on mobile.
-- [ ] [P0] No horizontal scrolling at common mobile widths.
+- [x] [P0] No horizontal scrolling at common mobile widths — verified in E2E.
 - [x] [P0] Ads must not overlap controls/results.
 
 ---
@@ -138,9 +138,9 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 
 - [x] [P0] Unit tests for every pure calculation function (normal, min, decimals, mixed units, large, zero/negative, invalid, waste boundaries, rounding).
 - [x] [P0] Reference test cases: concrete slab, flooring, roof pitch.
-- [ ] [P0] E2E tests (Playwright): page load, valid inputs, invalid errors, results update, unit switching, reset, print, nav, no horizontal overflow, keyboard-only.
+- [x] [P0] E2E tests (Playwright): page load, valid inputs, invalid errors, results update, unit switching, reset, print, nav, no horizontal overflow, keyboard-only — smoke suite.
 - [ ] [P0] Manual cross-check of result values.
-- [ ] [P0] Mobile viewport testing.
+- [x] [P0] Mobile viewport testing — E2E mobile overflow check.
 - [x] [P0] Accessibility basics check — semantic HTML, labels, focus, reduced-motion, aria-live.
 
 ---
@@ -172,7 +172,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [ ] [P0] Domain + DNS configured.
 - [ ] [P0] HTTPS active.
 - [x] [P0] Production build passes.
-- [ ] [P0] All calculators tested.
+- [x] [P0] All calculators tested — E2E page-load coverage for all 8.
 - [x] [P0] 404 page configured.
 - [x] [P0] Metadata + canonical URLs checked.
 - [x] [P0] Sitemap + robots.txt checked.

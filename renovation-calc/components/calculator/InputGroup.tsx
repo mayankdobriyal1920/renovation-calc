@@ -6,16 +6,24 @@ interface InputGroupProps {
   error?: string;
   hint?: string;
   children: React.ReactNode;
+  id?: string;
 }
 
-export default function InputGroup({ label, unit, error, hint, children }: InputGroupProps) {
+export default function InputGroup({ label, unit, error, hint, children, id }: InputGroupProps) {
+  const fieldId = id ?? React.useId();
+  const child = React.isValidElement(children)
+    ? React.cloneElement(children as React.ReactElement<{ id?: string }>, { id: fieldId })
+    : children;
+
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between">
-        <label className="text-sm font-medium text-white/90">{label}</label>
+        <label htmlFor={fieldId} className="text-sm font-medium text-white/90">
+          {label}
+        </label>
         {unit && <span className="text-xs text-white/50">{unit}</span>}
       </div>
-      {children}
+      {child}
       {hint && !error && <p className="text-xs text-white/50">{hint}</p>}
       {error && <p className="text-xs text-red-300">{error}</p>}
     </div>
