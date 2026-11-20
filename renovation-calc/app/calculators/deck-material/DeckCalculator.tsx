@@ -102,6 +102,11 @@ export default function DeckCalculator() {
           a: "No — it estimates board and joist counts only. Structural design requires project-specific engineering.",
         },
       ]}
+      commonMistakes={[
+        "Ignoring board gap — small gaps add up across many rows and change the board count.",
+        "Forgetting joist direction — boards run perpendicular to joists, affecting linear footage.",
+        "Skipping waste allowance — cuts and mistakes mean you need extra boards.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

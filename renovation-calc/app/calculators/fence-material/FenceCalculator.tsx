@@ -107,6 +107,11 @@ export default function FenceCalculator() {
           a: "It is a maximum target; actual spacing is distributed evenly across spans.",
         },
       ]}
+      commonMistakes={[
+        "Assuming one post spacing fits every fence — corners, gates, and slopes change counts.",
+        "Forgetting terminal and corner posts — they may need different specs than line posts.",
+        "Including gate openings in picket counts — gates need their own posts and hardware.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

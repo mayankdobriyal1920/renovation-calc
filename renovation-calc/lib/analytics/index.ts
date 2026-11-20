@@ -33,6 +33,12 @@ function safeParams(params: EventParams): Record<string, string> {
 
 export function track(event: AnalyticsEvent, params: EventParams = {}): void {
   if (typeof window === "undefined") return;
+  // Respect cookie consent: if declined, do not fire analytics.
+  try {
+    if (localStorage.getItem("cookie_consent") === "false") return;
+  } catch {
+    // If localStorage unavailable, allow tracking (banner will handle UI).
+  }
   const p = safeParams(params);
   try {
     if (typeof window.gtag === "function") {

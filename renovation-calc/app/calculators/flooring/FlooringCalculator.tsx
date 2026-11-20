@@ -122,6 +122,11 @@ export default function FlooringCalculator() {
           a: "Net room area; openings are typically not subtracted for flooring since cuts still use material.",
         },
       ]}
+      commonMistakes={[
+        "Buying exactly the net area — always add waste for cuts and mistakes.",
+        "Ignoring pattern matching — diagonal or patterned layouts need more material.",
+        "Using coverage from a different product — always read the box you're actually buying.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

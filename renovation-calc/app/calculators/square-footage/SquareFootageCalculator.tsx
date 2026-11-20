@@ -100,6 +100,11 @@ export default function SquareFootageCalculator() {
           a: "Split it into two rectangles, add both as included areas.",
         },
       ]}
+      commonMistakes={[
+        "Mixing units without converting — always convert all dimensions to the same unit first.",
+        "Subtracting more than you add — excluded area can't exceed included area.",
+        "Forgetting irregular shapes — split L-shaped rooms into simple rectangles.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

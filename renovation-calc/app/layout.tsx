@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import AnalyticsInit from "@/components/layout/AnalyticsInit";
+import StructuredData from "@/components/seo/StructuredData";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://homecalchub.online"),
@@ -25,7 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-blobs min-h-screen text-white antialiased">
+        <StructuredData />
         <AnalyticsInit />
+        <CookieConsent />
         <Header />
         <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6">{children}</main>
         <Footer />

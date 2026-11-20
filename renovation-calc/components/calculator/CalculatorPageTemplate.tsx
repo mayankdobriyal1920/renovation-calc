@@ -23,6 +23,7 @@ export interface CalculatorPageTemplateProps {
   example?: React.ReactNode;
   related?: RelatedItem[];
   faqs?: FaqItem[];
+  commonMistakes?: string[];
   sources?: string;
 }
 
@@ -36,6 +37,7 @@ export default function CalculatorPageTemplate({
   example,
   related,
   faqs,
+  commonMistakes,
   sources,
 }: CalculatorPageTemplateProps) {
   const crumbs = breadcrumbs ?? [
@@ -103,6 +105,17 @@ export default function CalculatorPageTemplate({
               </details>
             ))}
           </div>
+        </section>
+      )}
+
+      {commonMistakes && commonMistakes.length > 0 && (
+        <section className="mt-10 glass rounded-2xl p-6">
+          <h2 className="text-xl font-semibold text-white">Common mistakes</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-white/70">
+            {commonMistakes.map((m, i) => (
+              <li key={i}>{m}</li>
+            ))}
+          </ul>
         </section>
       )}
 

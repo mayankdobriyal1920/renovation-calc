@@ -101,6 +101,11 @@ export default function ConcreteSlabCalculator() {
           a: "Yes — the waste allowance is fully editable. Any default is a planning assumption, not a rule.",
         },
       ]}
+      commonMistakes={[
+        "Assuming one thickness fits every project — slab thickness depends on use, soil, and local code.",
+        "Forgetting waste allowance — always add 5–10% for spillage and over-excavation.",
+        "Ignoring delivery minimums — short-load fees can add significant cost.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

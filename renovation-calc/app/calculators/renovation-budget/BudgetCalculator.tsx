@@ -180,6 +180,11 @@ export default function BudgetCalculator() {
           a: "No. Drafts are stored only in your browser on this device.",
         },
       ]}
+      commonMistakes={[
+        "Forgetting tax — it only applies to taxable items, not the whole subtotal.",
+        "Skipping contingency — 10–20% covers surprises and price changes.",
+        "Using guessed prices — always use real quotes or current product prices.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

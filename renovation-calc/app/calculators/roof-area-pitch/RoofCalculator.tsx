@@ -109,6 +109,11 @@ export default function RoofCalculator() {
           a: "No for complex roofs. Hips, valleys, dormers and multiple levels need separate plane measurements.",
         },
       ]}
+      commonMistakes={[
+        "Using plan area instead of sloped area — steep roofs need significantly more material.",
+        "Forgetting overhangs — eaves and rakes add surface area beyond the footprint.",
+        "Ignoring hips and valleys — complex roofs need each plane measured separately.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>

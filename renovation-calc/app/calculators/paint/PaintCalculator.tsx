@@ -149,6 +149,11 @@ export default function PaintCalculator() {
           a: "Primer is calculated separately when you enable it, using its own coverage and coats.",
         },
       ]}
+      commonMistakes={[
+        "Using one coverage figure for all surfaces — texture, porosity, and color change affect coverage.",
+        "Forgetting to multiply by number of coats — required area is net area × coats.",
+        "Buying exactly the calculated gallons — round up to whole gallons for touch-ups.",
+      ]}
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <CalculatorCard>
