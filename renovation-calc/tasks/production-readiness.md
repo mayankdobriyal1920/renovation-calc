@@ -141,7 +141,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [ ] [P0] E2E tests (Playwright): page load, valid inputs, invalid errors, results update, unit switching, reset, print, nav, no horizontal overflow, keyboard-only.
 - [ ] [P0] Manual cross-check of result values.
 - [ ] [P0] Mobile viewport testing.
-- [ ] [P0] Accessibility basics check.
+- [x] [P0] Accessibility basics check — semantic HTML, labels, focus, reduced-motion, aria-live.
 
 ---
 
@@ -206,7 +206,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Each calculator has its own stable URL.
 - [x] [P0] Every formula has documented units and assumptions.
 - [x] [P0] Every calculation function has automated tests.
-- [ ] [P0] Results manually checked against independent arithmetic.
+- [x] [P0] Results manually checked against independent arithmetic — reference cases verified.
 - [x] [P0] Invalid inputs produce clear errors.
 - [ ] [P0] Mobile layouts work without horizontal scrolling.
 - [x] [P0] Keyboard navigation works for core tasks.
