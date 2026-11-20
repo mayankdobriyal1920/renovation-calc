@@ -69,8 +69,8 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] How-to-use instructions.
 - [x] [P0] Worked example with units.
 - [x] [P0] FAQ based on genuine user questions.
-- [ ] [P1] Guides: how to measure a room, concrete volume, paint coverage, fence line, deck boards, roof pitch, renovation budget.
-- [ ] [P1] Category pages summarizing tools.
+- [x] [P1] Guides: how to measure a room, concrete volume, paint coverage, fence line, deck boards, roof pitch, renovation budget.
+- [x] [P1] Category pages summarizing tools — calculators index grouped by trade.
 - [x] [P1] Structured data (WebApplication, BreadcrumbList, Organization) where accurate — BreadcrumbList JSON-LD added.
 - [x] [P2] Open Graph metadata.
 

@@ -8,15 +8,38 @@ export const metadata: Metadata = {
   alternates: { canonical: "/calculators/" },
 };
 
-const LIST = [
-  { href: "/calculators/square-footage/", label: "Square Footage Calculator", icon: "📐", live: false },
-  { href: "/calculators/concrete-slab/", label: "Concrete Slab Calculator", icon: "🧱", live: true },
-  { href: "/calculators/flooring/", label: "Flooring Calculator", icon: "🪵", live: false },
-  { href: "/calculators/paint/", label: "Paint Calculator", icon: "🎨", live: false },
-  { href: "/calculators/fence-material/", label: "Fence Material Calculator", icon: "🪜", live: false },
-  { href: "/calculators/deck-material/", label: "Deck Material Calculator", icon: "🏡", live: false },
-  { href: "/calculators/roof-area-pitch/", label: "Roof Area & Pitch Calculator", icon: "🏠", live: false },
-  { href: "/calculators/renovation-budget/", label: "Renovation Budget Calculator", icon: "💰", live: false },
+const GROUPS: { title: string; items: { href: string; label: string; icon: string; live: boolean }[] }[] = [
+  {
+    title: "General",
+    items: [
+      { href: "/calculators/square-footage/", label: "Square Footage Calculator", icon: "📐", live: true },
+      { href: "/calculators/renovation-budget/", label: "Renovation Budget Calculator", icon: "💰", live: true },
+    ],
+  },
+  {
+    title: "Concrete",
+    items: [{ href: "/calculators/concrete-slab/", label: "Concrete Slab Calculator", icon: "🧱", live: true }],
+  },
+  {
+    title: "Flooring",
+    items: [{ href: "/calculators/flooring/", label: "Flooring Calculator", icon: "🪵", live: true }],
+  },
+  {
+    title: "Painting",
+    items: [{ href: "/calculators/paint/", label: "Paint Calculator", icon: "🎨", live: true }],
+  },
+  {
+    title: "Fencing",
+    items: [{ href: "/calculators/fence-material/", label: "Fence Material Calculator", icon: "🪜", live: true }],
+  },
+  {
+    title: "Decking",
+    items: [{ href: "/calculators/deck-material/", label: "Deck Material Calculator", icon: "🏡", live: true }],
+  },
+  {
+    title: "Roofing",
+    items: [{ href: "/calculators/roof-area-pitch/", label: "Roof Area & Pitch Calculator", icon: "🏠", live: true }],
+  },
 ];
 
 export default function CalculatorsIndex() {
@@ -25,29 +48,27 @@ export default function CalculatorsIndex() {
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Calculators" }]} />
       <h1 className="mt-6 text-3xl font-bold text-white">Calculators</h1>
       <p className="mt-2 text-white/70">
-        Practical quantity and planning calculators for home-improvement projects.
+        Practical quantity and planning calculators for home-improvement projects, grouped by trade.
       </p>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {LIST.map((c) => (
-          <Link
-            key={c.href}
-            href={c.href}
-            className="glass-card group rounded-2xl p-5 transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="flex items-start justify-between">
-              <span className="text-3xl">{c.icon}</span>
-              {c.live ? (
-                <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-xs font-medium text-emerald-300">
-                  Live
-                </span>
-              ) : (
-                <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs font-medium text-white/50">
-                  Soon
-                </span>
-              )}
+      <div className="mt-8 space-y-8">
+        {GROUPS.map((g) => (
+          <section key={g.title}>
+            <h2 className="text-xl font-semibold text-white">{g.title}</h2>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {g.items.map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="glass-card group rounded-2xl p-4 transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{c.icon}</span>
+                    <span className="font-medium text-white group-hover:text-orange-300">{c.label}</span>
+                  </div>
+                </Link>
+              ))}
             </div>
-            <h2 className="mt-3 text-lg font-semibold text-white group-hover:text-orange-300">{c.label}</h2>
-          </Link>
+          </section>
         ))}
       </div>
     </div>
