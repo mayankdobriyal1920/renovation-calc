@@ -19,11 +19,11 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <img
               src="/logo.png"
-              alt="RenovationCalc logo"
+              alt="Home Calculator Hub logo"
               className="h-9 w-auto rounded-xl shadow-lg"
             />
             <span className="text-lg font-semibold tracking-tight text-white">
-              RenovationCalc
+              Home Calculator Hub
             </span>
           </Link>
 

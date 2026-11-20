@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Deploy script for RenovationCalc (Next.js + Vercel)
+# Deploy script for Home Calculator Hub (Next.js + Vercel)
 #
 # Usage:
 #   bash scripts/deploy.sh          # preview deploy
@@ -21,7 +21,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
 echo "============================================================"
-echo "  RenovationCalc — Web Deploy"
+echo "  Home Calculator Hub — Web Deploy"
 echo "============================================================"
 echo ""
 

@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact RenovationCalc.",
+  description: "Contact Home Calculator Hub.",
   alternates: { canonical: "/contact/" },
 };
 

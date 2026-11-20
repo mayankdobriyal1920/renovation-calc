@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description: "Cookie policy for RenovationCalc.",
+  description: "Cookie policy for Home Calculator Hub.",
   alternates: { canonical: "/cookie-policy/" },
 };
 

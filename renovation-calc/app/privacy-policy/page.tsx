@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for RenovationCalc home renovation calculators.",
+  description: "Privacy policy for Home Calculator Hub home renovation calculators.",
   alternates: { canonical: "/privacy-policy/" },
 };
 
@@ -17,7 +17,7 @@ export default function Page() {
 
         <h2 className="mt-6 text-xl font-semibold text-white">Overview</h2>
         <p className="mt-2 text-white/70">
-          RenovationCalc provides browser-based home-improvement calculators. Calculations run in
+          Home Calculator Hub provides browser-based home-improvement calculators. Calculations run in
           your browser. We do not require accounts and do not store your project data on our servers.
         </p>
 

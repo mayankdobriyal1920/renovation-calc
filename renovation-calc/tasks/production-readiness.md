@@ -1,7 +1,7 @@
-# Home Renovation Calculator Hub — Production Readiness Task Tracker
+# Home Calculator Hub — Production Readiness Task Tracker
 
-**Project:** RenovationCalc (placeholder name)  
-**Spec:** `home-renovation-calculator-hub-production-spec.md`  
+**Project:** Home Calculator Hub (placeholder name)  
+**Spec:** `home-home-calculator-hubulator-hub-production-spec.md`  
 **Created:** 20 November 2026  
 **Status legend:** `[ ]` not started · `[x]` done · `[~]` in progress  
 **Priority:** P0 (must have for launch) · P1 (should have) · P2 (nice to have)

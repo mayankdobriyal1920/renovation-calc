@@ -1,8 +1,8 @@
 {
-  "name": "renovation-calc",
+  "name": "home-calculator-hub",
   "version": "0.1.0",
   "private": true,
-  "description": "Home Renovation Calculator Hub - US-focused planning calculators",
+  "description": "Home Calculator Hub - US-focused planning calculators",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

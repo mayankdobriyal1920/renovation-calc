@@ -157,7 +157,7 @@ export default function HomePage() {
 
       {/* Why section */}
       <section className="mt-16 glass rounded-3xl p-6 sm:p-10">
-        <h2 className="text-2xl font-bold text-white">Why RenovationCalc</h2>
+        <h2 className="text-2xl font-bold text-white">Why Home Calculator Hub</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {

@@ -1,4 +1,4 @@
-# Home Renovation Calculator Hub
+# Home Calculator Hub
 
 ## Production-oriented Product Requirements & Technical Specification
 
@@ -8,7 +8,7 @@
 **Business model:** Free web tools supported primarily by display
 advertising\
 **Product type:** SEO-led, browser-first calculator website\
-**Working name:** RenovationCalc (placeholder; check trademark, domain
+**Working name:** Home Calculator Hub (placeholder; check trademark, domain
 and social availability before use)
 
 > **Scope note:** This is a build specification, not a guarantee of
@@ -855,7 +855,7 @@ notices will work for the intended audience.
 # 9. Suggested project structure
 
 ``` text
-renovation-calc/
+home-calculator-hub/
 ├── app/
 │   ├── layout.tsx
 │   ├── page.tsx
@@ -1630,7 +1630,7 @@ The initial release is ready only when all of the following are true:
 
 # 24. Final product recommendation
 
-Build **Home Renovation Calculator Hub** as a focused, trustworthy
+Build **Home Calculator Hub** as a focused, trustworthy
 collection of quantity and planning calculators.
 
 The strongest v1 is not a giant directory. It is a small set of

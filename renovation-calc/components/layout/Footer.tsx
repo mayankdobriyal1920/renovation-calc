@@ -37,8 +37,8 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="RenovationCalc logo" className="h-9 w-auto rounded-xl shadow-lg" />
-              <span className="text-lg font-semibold text-white">RenovationCalc</span>
+              <img src="/logo.png" alt="Home Calculator Hub logo" className="h-9 w-auto rounded-xl shadow-lg" />
+              <span className="text-lg font-semibold text-white">Home Calculator Hub</span>
             </div>
             <p className="mt-3 text-sm text-white/70">
               Straightforward home-improvement calculators that help you estimate project quantities
@@ -67,7 +67,7 @@ export default function Footer() {
             permit guidance. Verify measurements and product requirements before purchasing
             materials or beginning work.
           </p>
-          <p className="mt-2">© {new Date().getFullYear()} RenovationCalc. All rights reserved.</p>
+          <p className="mt-2">© {new Date().getFullYear()} Home Calculator Hub. All rights reserved.</p>
         </div>
       </div>
     </footer>

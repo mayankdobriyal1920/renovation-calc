@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
-  description: "Calculator disclaimer for RenovationCalc.",
+  description: "Calculator disclaimer for Home Calculator Hub.",
   alternates: { canonical: "/disclaimer/" },
 };
 

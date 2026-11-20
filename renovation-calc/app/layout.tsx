@@ -7,13 +7,13 @@ import AnalyticsInit from "@/components/layout/AnalyticsInit";
 export const metadata: Metadata = {
   metadataBase: new URL("https://homecalchub.online"),
   title: {
-    default: "Home Renovation Calculator Hub",
-    template: "%s | RenovationCalc",
+    default: "Home Calculator Hub",
+    template: "%s | Home Calculator Hub",
   },
   description:
     "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
   openGraph: {
-    title: "Home Renovation Calculator Hub",
+    title: "Home Calculator Hub",
     description:
       "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
     type: "website",

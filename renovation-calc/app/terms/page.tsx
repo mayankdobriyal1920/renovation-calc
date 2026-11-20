@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Terms of use for RenovationCalc.",
+  description: "Terms of use for Home Calculator Hub.",
   alternates: { canonical: "/terms/" },
 };
 
@@ -17,7 +17,7 @@ export default function Page() {
 
         <h2 className="mt-6 text-xl font-semibold text-white">Acceptance</h2>
         <p className="mt-2 text-white/70">
-          By using RenovationCalc you agree to these terms. If you do not agree, do not use the site.
+          By using Home Calculator Hub you agree to these terms. If you do not agree, do not use the site.
         </p>
 
         <h2 className="mt-6 text-xl font-semibold text-white">Use of the service</h2>
@@ -35,7 +35,7 @@ export default function Page() {
 
         <h2 className="mt-6 text-xl font-semibold text-white">Intellectual property</h2>
         <p className="mt-2 text-white/70">
-          Site content, design and code are owned by RenovationCalc unless otherwise noted. You may
+          Site content, design and code are owned by Home Calculator Hub unless otherwise noted. You may
           not copy or redistribute without permission.
         </p>
 
