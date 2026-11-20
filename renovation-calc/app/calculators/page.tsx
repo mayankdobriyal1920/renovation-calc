@@ -47,23 +47,28 @@ export default function CalculatorsIndex() {
     <div>
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Calculators" }]} />
       <h1 className="mt-6 text-3xl font-bold text-white">Calculators</h1>
-      <p className="mt-2 text-white/70">
+      <p className="mt-2 max-w-2xl text-white/70">
         Practical quantity and planning calculators for home-improvement projects, grouped by trade.
       </p>
-      <div className="mt-8 space-y-8">
+
+      <div className="mt-10 space-y-10">
         {GROUPS.map((g) => (
           <section key={g.title}>
-            <h2 className="text-xl font-semibold text-white">{g.title}</h2>
-            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <h2 className="text-xl font-semibold text-white tracking-tight">{g.title}</h2>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {g.items.map((c) => (
                 <Link
                   key={c.href}
                   href={c.href}
-                  className="glass-card group rounded-2xl p-4 transition hover:-translate-y-1 hover:shadow-xl"
+                  className="glass-card group rounded-2xl p-5 sm:p-6 transition hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">{c.icon}</span>
-                    <span className="font-medium text-white group-hover:text-orange-300">{c.label}</span>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 shrink-0">
+                      <span className="text-xl">{c.icon}</span>
+                    </div>
+                    <span className="font-medium text-white group-hover:text-orange-300">
+                      {c.label}
+                    </span>
                   </div>
                 </Link>
               ))}
