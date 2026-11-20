@@ -10,7 +10,9 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "web:build": "next build",
+    "web:deploy": "bash ./scripts/deploy.sh"
   },
   "dependencies": {
     "next": "^15.0.0",
