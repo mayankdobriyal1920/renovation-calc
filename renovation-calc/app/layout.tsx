@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   },
   description:
     "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
+  openGraph: {
+    title: "Home Renovation Calculator Hub",
+    description:
+      "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
+    type: "website",
+    url: "https://renovationcalc.example",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

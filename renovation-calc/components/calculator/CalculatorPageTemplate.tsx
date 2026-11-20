@@ -44,8 +44,23 @@ export default function CalculatorPageTemplate({
     { label: title },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.label,
+      item: c.href ? `https://renovationcalc.example${c.href}` : undefined,
+    })),
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Breadcrumb items={crumbs} />
 
       <div className="mt-6">{children}</div>

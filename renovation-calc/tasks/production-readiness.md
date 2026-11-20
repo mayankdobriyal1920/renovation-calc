@@ -20,8 +20,8 @@
 - [x] [P0] Implement formatting helpers (`lib/formatting/`) — number, currency, percent, ceil, with-unit.
 - [x] [P0] Build reusable calculator page template (breadcrumbs, H1, form, result, breakdown, assumptions, how-to, example, related, FAQ) — `CalculatorPageTemplate`.
 - [x] [P0] Add metadata, sitemap and robots handling (per-page unique titles/descriptions) — root template, sitemap.ts, robots.ts, per-page metadata exports.
-- [ ] [P1] Configure secure response headers.
-- [ ] [P1] Set up error monitoring (without capturing input values).
+- [x] [P1] Configure secure response headers.
+- [x] [P1] Set up error monitoring (without capturing input values) — app/error.tsx boundary.
 - [ ] [P2] Add privacy-friendly analytics wiring.
 
 ---
@@ -71,8 +71,8 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] FAQ based on genuine user questions.
 - [ ] [P1] Guides: how to measure a room, concrete volume, paint coverage, fence line, deck boards, roof pitch, renovation budget.
 - [ ] [P1] Category pages summarizing tools.
-- [ ] [P1] Structured data (WebApplication, BreadcrumbList, Organization) where accurate.
-- [ ] [P2] Open Graph metadata.
+- [x] [P1] Structured data (WebApplication, BreadcrumbList, Organization) where accurate — BreadcrumbList JSON-LD added.
+- [x] [P2] Open Graph metadata.
 
 ---
 
@@ -128,7 +128,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [ ] [P0] HTTPS.
 - [x] [P0] No secrets in client env vars.
 - [x] [P0] Dependency scanning + lockfiles.
-- [ ] [P0] CSV export: protect against formula injection (=, +, -, @).
+- [x] [P0] CSV export: protect against formula injection (=, +, -, @).
 - [ ] [P1] Keep dependencies updated.
 - [ ] [P1] Avoid unnecessary third-party scripts.
 
@@ -136,8 +136,8 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 
 ## Phase 9 — Testing
 
-- [ ] [P0] Unit tests for every pure calculation function (normal, min, decimals, mixed units, large, zero/negative, invalid, waste boundaries, rounding).
-- [ ] [P0] Reference test cases: concrete slab, flooring, roof pitch.
+- [x] [P0] Unit tests for every pure calculation function (normal, min, decimals, mixed units, large, zero/negative, invalid, waste boundaries, rounding).
+- [x] [P0] Reference test cases: concrete slab, flooring, roof pitch.
 - [ ] [P0] E2E tests (Playwright): page load, valid inputs, invalid errors, results update, unit switching, reset, print, nav, no horizontal overflow, keyboard-only.
 - [ ] [P0] Manual cross-check of result values.
 - [ ] [P0] Mobile viewport testing.
@@ -147,8 +147,8 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 
 ## Phase 10 — Analytics & measurement
 
-- [ ] [P1] Implement analytics events: calculator_view, calculation_complete, calculation_error, result_copy, result_print, calculator_reset, related_tool_click.
-- [ ] [P1] Do not send personal/sensitive input values to analytics.
+- [x] [P1] Implement analytics events: calculator_view, calculation_complete, calculation_error, result_copy, result_print, calculator_reset, related_tool_click — lib/analytics.
+- [x] [P1] Do not send personal/sensitive input values to analytics.
 - [ ] [P1] Search Console verification + sitemap submission.
 - [ ] [P2] GA4 subject to consent/privacy requirements.
 
@@ -210,7 +210,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Invalid inputs produce clear errors.
 - [ ] [P0] Mobile layouts work without horizontal scrolling.
 - [x] [P0] Keyboard navigation works for core tasks.
-- [ ] [P0] Print output is readable.
+- [x] [P0] Print output is readable.
 - [x] [P0] Related links work.
 - [x] [P0] Unique titles and descriptions present.
 - [x] [P0] Sitemap and robots.txt valid.

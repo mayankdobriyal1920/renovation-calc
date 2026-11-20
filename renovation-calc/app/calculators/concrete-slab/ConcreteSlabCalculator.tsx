@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CalculatorCard, { ResultPanel, BreakdownTable } from "@/components/calculator/CalculatorCard";
+import { track } from "@/lib/analytics";
 import InputGroup, { GlassInput } from "@/components/calculator/InputGroup";
 import AssumptionNotice from "@/components/calculator/AssumptionNotice";
 import CalculatorPageTemplate from "@/components/calculator/CalculatorPageTemplate";
@@ -16,6 +17,10 @@ export default function ConcreteSlabCalculator() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ReturnType<typeof calculateConcreteSlab> | null>(null);
 
+  useEffect(() => {
+    track("calculator_view", { calculator_id: "concrete-slab" });
+  }, []);
+
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
@@ -28,9 +33,11 @@ export default function ConcreteSlabCalculator() {
         pricePerCubicYard: price ? Number(price) : undefined,
       });
       setResult(r);
+      track("calculation_complete", { calculator_id: "concrete-slab" });
     } catch (err) {
       setResult(null);
       setError(err instanceof Error ? err.message : "Calculation failed.");
+      track("calculation_error", { calculator_id: "concrete-slab", error_type: "validation" });
     }
   }
 
