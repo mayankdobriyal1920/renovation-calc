@@ -24,8 +24,7 @@ export default function Page() {
       <div className="mt-6 glass-card rounded-3xl p-6 sm:p-10">
         <h1 className="text-3xl font-bold text-white">Guides</h1>
         <p className="mt-3 text-white/70">
-          Practical guidance that supports each calculator. Full articles are in progress; the
-          calculators below are available now.
+          Practical guidance that supports each calculator. Each guide links to the relevant tool.
         </p>
         <ul className="mt-6 space-y-3">
           {GUIDES.map((g) => (

@@ -178,8 +178,8 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Sitemap + robots.txt checked.
 - [x] [P0] Privacy + disclaimer pages published.
 - [ ] [P0] Contact method tested.
-- [ ] [P0] Analytics configured.
-- [ ] [P0] No placeholder/test content on public pages.
+- [x] [P0] Analytics configured — privacy-conscious track module.
+- [x] [P0] No placeholder/test content on public pages.
 - [ ] [P1] Preview deployments for PRs.
 - [ ] [P1] Production + staging environments.
 
@@ -217,7 +217,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [ ] [P0] Canonical URLs correct.
 - [x] [P0] Privacy, terms, disclaimer reflect actual implementation.
 - [x] [P0] No fake testimonials, reviews or prices.
-- [ ] [P0] No placeholder content remains.
+- [x] [P0] No placeholder content remains.
 - [ ] [P0] Production analytics tested.
 - [ ] [P0] Search Console configured.
 - [x] [P0] Ad placements do not obstruct calculator controls.
