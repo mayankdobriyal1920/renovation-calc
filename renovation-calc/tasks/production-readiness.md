@@ -177,7 +177,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Metadata + canonical URLs checked.
 - [x] [P0] Sitemap + robots.txt checked.
 - [x] [P0] Privacy + disclaimer pages published.
-- [ ] [P0] Contact method tested.
+- [x] [P0] Contact method tested — live at https://www.homecalchub.online/contact/
 - [x] [P0] Analytics configured — privacy-conscious track module.
 - [x] [P0] No placeholder/test content on public pages.
 - [ ] [P1] Preview deployments for PRs.
@@ -208,13 +208,13 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Every calculation function has automated tests.
 - [x] [P0] Results manually checked against independent arithmetic — reference cases verified.
 - [x] [P0] Invalid inputs produce clear errors.
-- [ ] [P0] Mobile layouts work without horizontal scrolling.
+- [x] [P0] Mobile layouts work without horizontal scrolling — verified in E2E.
 - [x] [P0] Keyboard navigation works for core tasks.
 - [x] [P0] Print output is readable.
 - [x] [P0] Related links work.
 - [x] [P0] Unique titles and descriptions present.
 - [x] [P0] Sitemap and robots.txt valid.
-- [ ] [P0] Canonical URLs correct.
+- [x] [P0] Canonical URLs correct — live at https://www.homecalchub.online/ with canonical metadata.
 - [x] [P0] Privacy, terms, disclaimer reflect actual implementation.
 - [x] [P0] No fake testimonials, reviews or prices.
 - [x] [P0] No placeholder content remains.
