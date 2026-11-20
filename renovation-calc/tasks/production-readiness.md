@@ -85,7 +85,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] No color-only communication.
 - [x] [P0] Screen-reader announcements for updated results.
 - [x] [P0] Respect reduced-motion.
-- [ ] [P0] Accessible tables/diagrams.
+- [x] [P0] Accessible tables/diagrams — BreakdownTable uses semantic dl/dt/dd.
 - [x] [P0] Core tasks possible without a mouse.
 - [x] [P0] Mobile-first single-column form, large touch targets.
 - [x] [P0] Results immediately below form on mobile.
@@ -108,10 +108,10 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 
 ## Phase 7 — Performance
 
-- [ ] [P0] Fast initial render on mobile.
+- [x] [P0] Fast initial render on mobile — static generation, minimal client JS.
 - [x] [P0] Calculator usable without waiting for ad scripts.
 - [x] [P0] Minimal client JS.
-- [ ] [P0] Optimized images.
+- [x] [P0] Optimized images — no raster images used (emoji + CSS only).
 - [x] [P0] Font loading without blocking.
 - [x] [P0] No large animation libraries.
 - [ ] [P0] Reserved ad space to reduce CLS.
@@ -130,7 +130,7 @@ Per calculator UI requirements: labels (not placeholder-only), units shown, keyb
 - [x] [P0] Dependency scanning + lockfiles.
 - [x] [P0] CSV export: protect against formula injection (=, +, -, @).
 - [ ] [P1] Keep dependencies updated.
-- [ ] [P1] Avoid unnecessary third-party scripts.
+- [x] [P1] Avoid unnecessary third-party scripts — no third-party scripts loaded by default.
 
 ---
 
