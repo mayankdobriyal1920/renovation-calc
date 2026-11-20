@@ -37,9 +37,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 text-lg font-bold text-white shadow-lg">
-                R
-              </span>
+              <img src="/logo.png" alt="RenovationCalc logo" className="h-9 w-auto rounded-xl shadow-lg" />
               <span className="text-lg font-semibold text-white">RenovationCalc</span>
             </div>
             <p className="mt-3 text-sm text-white/70">

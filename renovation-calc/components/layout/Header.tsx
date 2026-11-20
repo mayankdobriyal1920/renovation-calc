@@ -17,9 +17,11 @@ export default function Header() {
       <div className="glass-strong mx-auto mt-3 max-w-6xl rounded-2xl px-4 py-3 sm:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 text-lg font-bold text-white shadow-lg">
-              R
-            </span>
+            <img
+              src="/logo.png"
+              alt="RenovationCalc logo"
+              className="h-9 w-auto rounded-xl shadow-lg"
+            />
             <span className="text-lg font-semibold tracking-tight text-white">
               RenovationCalc
             </span>
