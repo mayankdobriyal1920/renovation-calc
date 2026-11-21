@@ -4,28 +4,28 @@ const COLS = [
   {
     title: "Calculators",
     links: [
-      { href: "/calculators/square-footage/", label: "Square Footage" },
-      { href: "/calculators/concrete-slab/", label: "Concrete Slab" },
-      { href: "/calculators/flooring/", label: "Flooring" },
-      { href: "/calculators/paint/", label: "Paint" },
-      { href: "/calculators/fence-material/", label: "Fence Material" },
+      { href: "/calculators/square-footage", label: "Square Footage" },
+      { href: "/calculators/concrete-slab", label: "Concrete Slab" },
+      { href: "/calculators/flooring", label: "Flooring" },
+      { href: "/calculators/paint", label: "Paint" },
+      { href: "/calculators/fence-material", label: "Fence Material" },
     ],
   },
   {
     title: "Company",
     links: [
-      { href: "/about/", label: "About" },
-      { href: "/guides/", label: "Guides" },
-      { href: "/contact/", label: "Contact" },
+      { href: "/about", label: "About" },
+      { href: "/guides", label: "Guides" },
+      { href: "/contact", label: "Contact" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { href: "/privacy-policy/", label: "Privacy Policy" },
-      { href: "/terms/", label: "Terms of Use" },
-      { href: "/disclaimer/", label: "Disclaimer" },
-      { href: "/cookie-policy/", label: "Cookie Policy" },
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Use" },
+      { href: "/disclaimer", label: "Disclaimer" },
+      { href: "/cookie-policy", label: "Cookie Policy" },
     ],
   },
 ];

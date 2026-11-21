@@ -100,8 +100,8 @@ export default function RoofCalculator() {
         </div>
       }
       related={[
-        { href: "/calculators/square-footage/", label: "Square Footage Calculator" },
-        { href: "/calculators/renovation-budget/", label: "Renovation Budget Calculator" },
+        { href: "/calculators/square-footage", label: "Square Footage Calculator" },
+        { href: "/calculators/renovation-budget", label: "Renovation Budget Calculator" },
       ]}
       faqs={[
         {

@@ -5,40 +5,41 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 export const metadata: Metadata = {
   title: "Calculators",
   description: "Browse all home renovation calculators: square footage, concrete, flooring, paint, fencing and more.",
-  alternates: { canonical: "/calculators/" },
+  alternates: { canonical: "/calculators" },
+  openGraph: { url: "https://homecalchub.online/calculators" },
 };
 
 const GROUPS: { title: string; items: { href: string; label: string; icon: string; live: boolean }[] }[] = [
   {
     title: "General",
     items: [
-      { href: "/calculators/square-footage/", label: "Square Footage Calculator", icon: "📐", live: true },
-      { href: "/calculators/renovation-budget/", label: "Renovation Budget Calculator", icon: "💰", live: true },
+      { href: "/calculators/square-footage", label: "Square Footage Calculator", icon: "📐", live: true },
+      { href: "/calculators/renovation-budget", label: "Renovation Budget Calculator", icon: "💰", live: true },
     ],
   },
   {
     title: "Concrete",
-    items: [{ href: "/calculators/concrete-slab/", label: "Concrete Slab Calculator", icon: "🧱", live: true }],
+    items: [{ href: "/calculators/concrete-slab", label: "Concrete Slab Calculator", icon: "🧱", live: true }],
   },
   {
     title: "Flooring",
-    items: [{ href: "/calculators/flooring/", label: "Flooring Calculator", icon: "🪵", live: true }],
+    items: [{ href: "/calculators/flooring", label: "Flooring Calculator", icon: "🪵", live: true }],
   },
   {
     title: "Painting",
-    items: [{ href: "/calculators/paint/", label: "Paint Calculator", icon: "🎨", live: true }],
+    items: [{ href: "/calculators/paint", label: "Paint Calculator", icon: "🎨", live: true }],
   },
   {
     title: "Fencing",
-    items: [{ href: "/calculators/fence-material/", label: "Fence Material Calculator", icon: "🪜", live: true }],
+    items: [{ href: "/calculators/fence-material", label: "Fence Material Calculator", icon: "🪜", live: true }],
   },
   {
     title: "Decking",
-    items: [{ href: "/calculators/deck-material/", label: "Deck Material Calculator", icon: "🏡", live: true }],
+    items: [{ href: "/calculators/deck-material", label: "Deck Material Calculator", icon: "🏡", live: true }],
   },
   {
     title: "Roofing",
-    items: [{ href: "/calculators/roof-area-pitch/", label: "Roof Area & Pitch Calculator", icon: "🏠", live: true }],
+    items: [{ href: "/calculators/roof-area-pitch", label: "Roof Area & Pitch Calculator", icon: "🏠", live: true }],
   },
 ];
 

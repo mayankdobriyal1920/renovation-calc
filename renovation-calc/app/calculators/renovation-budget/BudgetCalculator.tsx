@@ -166,9 +166,9 @@ export default function BudgetCalculator() {
         </div>
       }
       related={[
-        { href: "/calculators/concrete-slab/", label: "Concrete Slab Calculator" },
-        { href: "/calculators/flooring/", label: "Flooring Calculator" },
-        { href: "/calculators/paint/", label: "Paint Calculator" },
+        { href: "/calculators/concrete-slab", label: "Concrete Slab Calculator" },
+        { href: "/calculators/flooring", label: "Flooring Calculator" },
+        { href: "/calculators/paint", label: "Paint Calculator" },
       ]}
       faqs={[
         {

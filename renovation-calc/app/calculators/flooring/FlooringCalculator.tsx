@@ -108,9 +108,9 @@ export default function FlooringCalculator() {
         </div>
       }
       related={[
-        { href: "/calculators/square-footage/", label: "Square Footage Calculator" },
-        { href: "/calculators/paint/", label: "Paint Calculator" },
-        { href: "/calculators/renovation-budget/", label: "Renovation Budget Calculator" },
+        { href: "/calculators/square-footage", label: "Square Footage Calculator" },
+        { href: "/calculators/paint", label: "Paint Calculator" },
+        { href: "/calculators/renovation-budget", label: "Renovation Budget Calculator" },
       ]}
       faqs={[
         {

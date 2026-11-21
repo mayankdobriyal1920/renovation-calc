@@ -5,7 +5,8 @@ export const metadata: Metadata = {
   title: "Square Footage Calculator",
   description:
     "Calculate area for rooms and rectangular spaces in square feet, yards and meters. Supports multiple rectangles and excluded areas.",
-  alternates: { canonical: "/calculators/square-footage/" },
+  alternates: { canonical: "/calculators/square-footage" },
+  openGraph: { url: "https://homecalchub.online/calculators/square-footage" },
 };
 
 export default function Page() {

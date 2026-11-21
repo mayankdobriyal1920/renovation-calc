@@ -50,7 +50,7 @@ export default function CookieConsent() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="text-sm text-white/80 leading-relaxed">
           We use cookies to analyze traffic and optimize your experience.{" "}
-          <a href="/cookie-policy/" className="text-orange-300 underline">Learn more</a>.
+          <a href="/cookie-policy" className="text-orange-300 underline">Learn more</a>.
         </div>
         <div className="flex gap-3 sm:gap-4">
           <button

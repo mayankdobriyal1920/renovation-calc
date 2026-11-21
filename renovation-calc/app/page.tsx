@@ -2,64 +2,87 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: { absolute: "Home Improvement Calculators | HomeCalcHub" },
   description:
     "Straightforward home-improvement calculators for square footage, concrete, flooring, paint, fencing and more. Free, no sign-up.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Home Improvement Calculators | HomeCalcHub",
+    description:
+      "Straightforward home-improvement calculators for square footage, concrete, flooring, paint, fencing and more. Free, no sign-up.",
+    url: "https://homecalchub.online/",
+    type: "website",
+    siteName: "HomeCalcHub",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HomeCalcHub - Home Improvement Calculators",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Improvement Calculators | HomeCalcHub",
+    description:
+      "Straightforward home-improvement calculators for square footage, concrete, flooring, paint, fencing and more. Free, no sign-up.",
+    images: ["/og-image.png"],
+  },
 };
 
 const CALCULATORS = [
   {
-    href: "/calculators/square-footage/",
+    href: "/calculators/square-footage",
     label: "Square Footage Calculator",
     desc: "Area of rooms, walls and irregular spaces in ft², yd² or m².",
     icon: "📐",
     status: "live",
   },
   {
-    href: "/calculators/concrete-slab/",
+    href: "/calculators/concrete-slab",
     label: "Concrete Slab Calculator",
     desc: "Volume in cubic feet and cubic yards with editable waste allowance.",
     icon: "🧱",
     status: "live",
   },
   {
-    href: "/calculators/flooring/",
+    href: "/calculators/flooring",
     label: "Flooring Calculator",
     desc: "Net area, purchase area and number of boxes needed.",
     icon: "🪵",
     status: "live",
   },
   {
-    href: "/calculators/paint/",
+    href: "/calculators/paint",
     label: "Paint Calculator",
     desc: "Gallons of paint and primer for walls and ceilings.",
     icon: "🎨",
     status: "live",
   },
   {
-    href: "/calculators/fence-material/",
+    href: "/calculators/fence-material",
     label: "Fence Material Calculator",
     desc: "Posts, rails and pickets for a straight fence run.",
     icon: "🪜",
     status: "live",
   },
   {
-    href: "/calculators/deck-material/",
+    href: "/calculators/deck-material",
     label: "Deck Material Calculator",
     desc: "Decking boards and joist counts for rectangular decks.",
     icon: "🏡",
     status: "live",
   },
   {
-    href: "/calculators/roof-area-pitch/",
+    href: "/calculators/roof-area-pitch",
     label: "Roof Area & Pitch Calculator",
     desc: "Slope factor and sloped roof surface area.",
     icon: "🏠",
     status: "live",
   },
   {
-    href: "/calculators/renovation-budget/",
+    href: "/calculators/renovation-budget",
     label: "Renovation Budget Calculator",
     desc: "Organize materials, labor and costs into a planning budget.",
     icon: "💰",
@@ -90,13 +113,13 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="/calculators/concrete-slab/"
+              href="/calculators/concrete-slab"
               className="rounded-xl bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
               Try the Concrete Slab Calculator
             </Link>
             <Link
-              href="/calculators/"
+              href="/calculators"
               className="glass rounded-xl px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
             >
               Browse all calculators
@@ -108,7 +131,7 @@ export default function HomePage() {
       {/* Stats / trust strip */}
       <section className="mt-8 grid gap-3 sm:grid-cols-3">
         {[
-          { k: "8", v: "Focused calculators" },
+          { k: String(CALCULATORS.filter((c) => c.status === "live").length), v: "Live calculators" },
           { k: "0", v: "Sign-ups required" },
           { k: "100%", v: "Client-side math" },
         ].map((s) => (
@@ -123,35 +146,51 @@ export default function HomePage() {
       <section className="mt-12">
         <div className="flex items-end justify-between">
           <h2 className="text-2xl font-bold text-white">Calculators</h2>
-          <Link href="/calculators/" className="text-sm text-orange-300 hover:text-orange-200">
+          <Link href="/calculators" className="text-sm text-orange-300 hover:text-orange-200">
             View all →
           </Link>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {CALCULATORS.map((c) => (
-            <Link
-              key={c.href}
-              href={c.href}
-              className="glass-card group rounded-2xl p-5 transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="flex items-start justify-between">
-                <span className="text-3xl">{c.icon}</span>
-                {c.status === "live" ? (
-                  <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-xs font-medium text-emerald-300">
-                    Live
-                  </span>
-                ) : (
-                  <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-xs font-medium text-emerald-300">
-                    Now
-                  </span>
-                )}
+          {CALCULATORS.map((c) => {
+            const isLive = c.status === "live";
+            const card = (
+              <>
+                <div className="flex items-start justify-between">
+                  <span className="text-3xl">{c.icon}</span>
+                  {isLive ? (
+                    <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-xs font-medium text-emerald-300">
+                      Live
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs font-medium text-white/60">
+                      Coming soon
+                    </span>
+                  )}
+                </div>
+                <h3 className="mt-3 text-lg font-semibold text-white group-hover:text-orange-300">
+                  {c.label}
+                </h3>
+                <p className="mt-1 text-sm text-white/70">{c.desc}</p>
+              </>
+            );
+            return isLive ? (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="glass-card group rounded-2xl p-5 transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                {card}
+              </Link>
+            ) : (
+              <div
+                key={c.href}
+                className="glass-card rounded-2xl p-5 opacity-60"
+                aria-disabled="true"
+              >
+                {card}
               </div>
-              <h3 className="mt-3 text-lg font-semibold text-white group-hover:text-orange-300">
-                {c.label}
-              </h3>
-              <p className="mt-1 text-sm text-white/70">{c.desc}</p>
-            </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 

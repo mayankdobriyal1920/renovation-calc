@@ -5,12 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "How to Create a Renovation Materials Budget",
   description: "How to organize a renovation budget.",
+  alternates: { canonical: "/guides/how-to-create-a-renovation-materials-budget" },
+  openGraph: { url: "https://homecalchub.online/guides/how-to-create-a-renovation-materials-budget" },
 };
 
 export default function Page() {
   return (
     <div>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides/" }, { label: "How to Create a Renovation Materials Budget" }]} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides" }, { label: "How to Create a Renovation Materials Budget" }]} />
       <article className="mt-6 glass-card rounded-3xl p-6 sm:p-10">
         <h1 className="text-3xl font-bold text-white">How to Create a Renovation Materials Budget</h1>
         <p className="mt-4 text-white/70">
@@ -31,7 +33,7 @@ export default function Page() {
         </p>
         <p className="mt-6 text-white/70">
           Use the{" "}
-          <Link href="/calculators/renovation-budget/" className="text-orange-300 underline">
+          <Link href="/calculators/renovation-budget" className="text-orange-300 underline">
             Renovation Budget Calculator
           </Link>
           . All prices are user-entered.

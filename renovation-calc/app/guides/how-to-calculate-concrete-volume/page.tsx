@@ -5,12 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "How to Calculate Concrete Volume",
   description: "Step-by-step guide to calculating concrete volume for a slab, with formulas and examples.",
+  alternates: { canonical: "/guides/how-to-calculate-concrete-volume" },
+  openGraph: { url: "https://homecalchub.online/guides/how-to-calculate-concrete-volume" },
 };
 
 export default function Page() {
   return (
     <div>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides/" }, { label: "How to Calculate Concrete Volume" }]} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides" }, { label: "How to Calculate Concrete Volume" }]} />
       <article className="mt-6 glass-card rounded-3xl p-6 sm:p-10">
         <h1 className="text-3xl font-bold text-white">How to Calculate Concrete Volume</h1>
         <p className="mt-4 text-white/70">
@@ -60,7 +62,7 @@ export default function Page() {
 
         <p className="mt-6 text-white/70">
           Use the{" "}
-          <Link href="/calculators/concrete-slab/" className="text-orange-300 underline">
+          <Link href="/calculators/concrete-slab" className="text-orange-300 underline">
             Concrete Slab Calculator
           </Link>{" "}
           to run the numbers for your project.

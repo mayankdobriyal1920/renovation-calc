@@ -4,7 +4,8 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Home Calculator Hub home renovation calculators.",
-  alternates: { canonical: "/privacy-policy/" },
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: { url: "https://homecalchub.online/privacy-policy" },
 };
 
 export default function Page() {

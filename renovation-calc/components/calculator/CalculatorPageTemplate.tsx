@@ -42,7 +42,7 @@ export default function CalculatorPageTemplate({
 }: CalculatorPageTemplateProps) {
   const crumbs = breadcrumbs ?? [
     { label: "Home", href: "/" },
-    { label: "Calculators", href: "/calculators/" },
+    { label: "Calculators", href: "/calculators" },
     { label: title },
   ];
 
@@ -53,7 +53,9 @@ export default function CalculatorPageTemplate({
       "@type": "ListItem",
       position: i + 1,
       name: c.label,
-      item: c.href ? `https://homecalchub.online${c.href}` : undefined,
+      item: c.href
+        ? `https://homecalchub.online${c.href === "/" ? "/" : c.href.replace(/\/$/, "")}`
+        : undefined,
     })),
   };
 

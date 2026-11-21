@@ -11,6 +11,17 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  trailingSlash: false,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.homecalchub.online" }],
+        destination: "https://homecalchub.online/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

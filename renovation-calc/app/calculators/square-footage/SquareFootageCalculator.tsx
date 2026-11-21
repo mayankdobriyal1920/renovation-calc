@@ -86,9 +86,9 @@ export default function SquareFootageCalculator() {
         </div>
       }
       related={[
-        { href: "/calculators/flooring/", label: "Flooring Calculator" },
-        { href: "/calculators/paint/", label: "Paint Calculator" },
-        { href: "/calculators/concrete-slab/", label: "Concrete Slab Calculator" },
+        { href: "/calculators/flooring", label: "Flooring Calculator" },
+        { href: "/calculators/paint", label: "Paint Calculator" },
+        { href: "/calculators/concrete-slab", label: "Concrete Slab Calculator" },
       ]}
       faqs={[
         {

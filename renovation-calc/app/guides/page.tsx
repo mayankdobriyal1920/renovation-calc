@@ -5,16 +5,18 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Guides",
   description: "Practical guides for measuring and estimating home renovation projects.",
+  alternates: { canonical: "/guides" },
+  openGraph: { url: "https://homecalchub.online/guides" },
 };
 
 const GUIDES = [
-  { href: "/calculators/square-footage/", label: "How to measure a room for flooring", tool: "Square Footage" },
-  { href: "/calculators/concrete-slab/", label: "How to calculate concrete volume", tool: "Concrete Slab" },
-  { href: "/calculators/paint/", label: "How to estimate paint coverage", tool: "Paint" },
-  { href: "/calculators/fence-material/", label: "How to measure a fence line", tool: "Fence Material" },
-  { href: "/calculators/deck-material/", label: "How to estimate deck board quantities", tool: "Deck Material" },
-  { href: "/calculators/roof-area-pitch/", label: "How roof pitch affects roof area", tool: "Roof Area & Pitch" },
-  { href: "/calculators/renovation-budget/", label: "How to create a renovation materials budget", tool: "Renovation Budget" },
+  { href: "/calculators/square-footage", label: "How to measure a room for flooring", tool: "Square Footage" },
+  { href: "/calculators/concrete-slab", label: "How to calculate concrete volume", tool: "Concrete Slab" },
+  { href: "/calculators/paint", label: "How to estimate paint coverage", tool: "Paint" },
+  { href: "/calculators/fence-material", label: "How to measure a fence line", tool: "Fence Material" },
+  { href: "/calculators/deck-material", label: "How to estimate deck board quantities", tool: "Deck Material" },
+  { href: "/calculators/roof-area-pitch", label: "How roof pitch affects roof area", tool: "Roof Area & Pitch" },
+  { href: "/calculators/renovation-budget", label: "How to create a renovation materials budget", tool: "Renovation Budget" },
 ];
 
 export default function Page() {

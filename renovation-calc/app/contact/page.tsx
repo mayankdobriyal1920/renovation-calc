@@ -4,7 +4,8 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact Home Calculator Hub.",
-  alternates: { canonical: "/contact/" },
+  alternates: { canonical: "/contact" },
+  openGraph: { url: "https://homecalchub.online/contact" },
 };
 
 export default function Page() {

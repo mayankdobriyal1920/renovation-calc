@@ -135,9 +135,9 @@ export default function PaintCalculator() {
         </div>
       }
       related={[
-        { href: "/calculators/square-footage/", label: "Square Footage Calculator" },
-        { href: "/calculators/flooring/", label: "Flooring Calculator" },
-        { href: "/calculators/renovation-budget/", label: "Renovation Budget Calculator" },
+        { href: "/calculators/square-footage", label: "Square Footage Calculator" },
+        { href: "/calculators/flooring", label: "Flooring Calculator" },
+        { href: "/calculators/renovation-budget", label: "Renovation Budget Calculator" },
       ]}
       faqs={[
         {

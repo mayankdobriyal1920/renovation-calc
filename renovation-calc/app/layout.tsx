@@ -9,17 +9,37 @@ import CookieConsent from "@/components/layout/CookieConsent";
 export const metadata: Metadata = {
   metadataBase: new URL("https://homecalchub.online"),
   title: {
-    default: "Home Calculator Hub",
-    template: "%s | Home Calculator Hub",
+    default: "Home Improvement Calculators | HomeCalcHub",
+    template: "%s | HomeCalcHub",
   },
   description:
-    "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
+    "Straightforward home-improvement calculators for square footage, concrete, flooring, paint, fencing and more. Free, no sign-up.",
   openGraph: {
-    title: "Home Calculator Hub",
+    title: "Home Improvement Calculators | HomeCalcHub",
     description:
-      "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
+      "Straightforward home-improvement calculators for square footage, concrete, flooring, paint, fencing and more. Free, no sign-up.",
     type: "website",
     url: "https://homecalchub.online",
+    siteName: "HomeCalcHub",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HomeCalcHub - Home Improvement Calculators",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Improvement Calculators | HomeCalcHub",
+    description:
+      "Straightforward home-improvement calculators for square footage, concrete, flooring, paint, fencing and more. Free, no sign-up.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

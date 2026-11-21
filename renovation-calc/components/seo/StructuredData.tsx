@@ -27,6 +27,16 @@ export default function StructuredData({
     sameAs: [],
   };
 
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name,
+    url,
+    description:
+      "Straightforward home-improvement calculators that help you estimate project quantities and plan material purchases.",
+    publisher: { "@type": "Organization", name, url, logo },
+  };
+
   const webApplication = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -44,6 +54,10 @@ export default function StructuredData({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
       />
       <script
         type="application/ld+json"

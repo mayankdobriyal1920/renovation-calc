@@ -4,9 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 
 const NAV = [
-  { href: "/calculators/", label: "Calculators" },
-  { href: "/guides/", label: "Guides" },
-  { href: "/about/", label: "About" },
+  { href: "/calculators", label: "Calculators" },
+  { href: "/guides", label: "Guides" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Header() {
@@ -38,7 +38,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/calculators/"
+              href="/calculators"
               className="ml-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-400 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:shadow-lg"
             >
               Start calculating
@@ -74,7 +74,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/calculators/"
+              href="/calculators"
               onClick={() => setOpen(false)}
               className="mt-1 rounded-xl bg-gradient-to-r from-orange-500 to-amber-400 px-4 py-2 text-center text-sm font-semibold text-white"
             >

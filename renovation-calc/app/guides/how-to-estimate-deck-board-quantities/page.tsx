@@ -5,12 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "How to Estimate Deck Board Quantities",
   description: "How to estimate decking boards and joists.",
+  alternates: { canonical: "/guides/how-to-estimate-deck-board-quantities" },
+  openGraph: { url: "https://homecalchub.online/guides/how-to-estimate-deck-board-quantities" },
 };
 
 export default function Page() {
   return (
     <div>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides/" }, { label: "How to Estimate Deck Board Quantities" }]} />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides" }, { label: "How to Estimate Deck Board Quantities" }]} />
       <article className="mt-6 glass-card rounded-3xl p-6 sm:p-10">
         <h1 className="text-3xl font-bold text-white">How to Estimate Deck Board Quantities</h1>
         <p className="mt-4 text-white/70">
@@ -32,7 +34,7 @@ export default function Page() {
         </p>
         <p className="mt-6 text-white/70">
           Use the{" "}
-          <Link href="/calculators/deck-material/" className="text-orange-300 underline">
+          <Link href="/calculators/deck-material" className="text-orange-300 underline">
             Deck Material Calculator
           </Link>
           . This is not a structural design tool.

@@ -4,7 +4,8 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms of use for Home Calculator Hub.",
-  alternates: { canonical: "/terms/" },
+  alternates: { canonical: "/terms" },
+  openGraph: { url: "https://homecalchub.online/terms" },
 };
 
 export default function Page() {
