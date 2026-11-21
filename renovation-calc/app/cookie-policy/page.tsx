@@ -25,8 +25,36 @@ export default function Page() {
         <ul className="mt-2 list-disc pl-5 text-white/70 space-y-1">
           <li>Essential cookies required for the site to function.</li>
           <li>Analytics cookies (if enabled) to understand usage.</li>
-          <li>Advertising cookies (if enabled) by third-party ad networks.</li>
+          <li>
+            Advertising cookies used by Google AdSense and other third-party ad networks to serve
+            relevant ads based on your browsing activity. Google may use the DoubleClick cookie to
+            serve ads on this site.
+          </li>
         </ul>
+        <h2 className="mt-6 text-xl font-semibold text-white">Google AdSense cookies</h2>
+        <p className="mt-2 text-white/70">
+          When AdSense is enabled, Google uses cookies (including the DoubleClick cookie) to serve
+          ads based on your visits to this site and other sites on the Internet. You can opt out of
+          the DoubleClick cookie for interest-based advertising by visiting{" "}
+          <a
+            href="https://adssettings.google.com"
+            className="text-orange-300 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Ads Settings
+          </a>
+          . You can also opt out via the{" "}
+          <a
+            href="https://optout.aboutads.info/"
+            className="text-orange-300 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Digital Advertising Alliance opt-out page
+          </a>
+          .
+        </p>
 
         <h2 className="mt-6 text-xl font-semibold text-white">Your control</h2>
         <p className="mt-2 text-white/70">

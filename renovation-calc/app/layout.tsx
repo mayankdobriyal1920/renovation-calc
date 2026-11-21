@@ -39,6 +39,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </>
         )}
+        {/* Google AdSense verification & ad serving */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3366036914417048"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="bg-blobs min-h-screen text-white antialiased">
         {gtmId && (

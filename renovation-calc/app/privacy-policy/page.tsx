@@ -30,9 +30,43 @@ export default function Page() {
 
         <h2 className="mt-6 text-xl font-semibold text-white">Cookies and advertising</h2>
         <p className="mt-2 text-white/70">
-          If advertising (such as Google AdSense) is enabled, third-party vendors may use cookies to
-          serve ads based on prior visits. You can opt out via your browser settings or the
-          vendor&apos;s opt-out tools. See our Cookie Policy for details.
+          We may use Google AdSense to display advertisements on this site. Google and its partners
+          use cookies to serve ads based on your prior visits to this website and other websites on
+          the Internet. Google&apos;s use of advertising cookies enables it and its partners to serve
+          ads to you based on your visit to this site and/or other sites on the Internet.
+        </p>
+        <p className="mt-2 text-white/70">
+          You may opt out of personalized advertising by visiting{" "}
+          <a
+            href="https://www.google.com/settings/ads"
+            className="text-orange-300 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Ads Settings
+          </a>
+          . You can also opt out of third-party vendor cookies by visiting the{" "}
+          <a
+            href="https://optout.networkadvertising.org/"
+            className="text-orange-300 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Network Advertising Initiative opt-out page
+          </a>
+          .
+        </p>
+        <p className="mt-2 text-white/70">
+          For more information about how Google collects and uses data, please visit{" "}
+          <a
+            href="https://policies.google.com/technologies/ads"
+            className="text-orange-300 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google&apos;s Advertising Privacy &amp; Terms
+          </a>
+          . See our Cookie Policy for additional details.
         </p>
 
         <h2 className="mt-6 text-xl font-semibold text-white">Browser storage</h2>
